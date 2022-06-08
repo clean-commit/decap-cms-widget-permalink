@@ -2,7 +2,12 @@
   "name": "netlify-cms-widget-permalink",
   "version": "1.0.0",
   "description": "Permalink widget for Netlify CMS",
-  "main": "./index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "readme.md"
+  ],
   "keywords": [],
   "author": "Wojciech Kaluzny <wk@cleancommit.io>",
   "license": "MIT",
@@ -11,10 +16,20 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files"
+  },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
     "@types/react": "^16.8.23"
   }
 }
