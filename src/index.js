@@ -32,7 +32,7 @@ export class Control extends React.Component {
     const parser = document.createElement('a');
     parser.href = `http://example.com${this.prepareUrl(value)}/`;
     return parser.pathname !== value
-      ? { error: { message: 'Invalid pathname.' } }
+      ? { error: { message: 'Invalid permalink.' } }
       : true;
   };
 
@@ -66,7 +66,6 @@ export class Control extends React.Component {
   };
 
   prepareUrl(val) {
-    console.log(val);
     let result = val;
     let prefix = this.props.field.get('prefix', '');
 
@@ -156,6 +155,6 @@ Control.defaultProps = {
 
 export const Widget = {
   // name that will be used in config.yml
-  name: 'cc-permalink',
+  name: 'permalink',
   controlComponent: Control,
 };

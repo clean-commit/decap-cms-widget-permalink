@@ -1,9 +1,8 @@
 {
   "name": "netlify-cms-widget-permalink",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Permalink widget for Netlify CMS",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "./dist/index.js",
   "files": [
     "dist",
     "readme.md"
