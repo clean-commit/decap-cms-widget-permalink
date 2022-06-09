@@ -14,18 +14,19 @@ This widget allows you to create custom permalinks that can be used to generate 
 
 ```
 npm install netlify-cms-widget-permalink
+yarn add netlify-cms-widget-permalink
 ```
 
 2. Import the Permalink widget to your Netlify CMS setup file
 
 ```
-import {PermalinkControl, PermalinkPreview} from 'netlify-cms-widget-permalink';
+import { Widget as PermalinkWidget } from 'netlify-cms-widget-permalink';
 ```
 
 3. Register the widget for use
 
 ```
-CMS.registerWidget('permalink', PermalinkControl, PermalinkPreview)
+CMS.registerWidget(PermalinkWidget);
 ```
 
 ## Usage details
@@ -40,7 +41,11 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "ID", name: "id", widget: "permalink", prefix: 'blog', url: 'http://example.com'}
+      - label: "Permalink",
+        name: "permalink",
+        widget: "permalink",
+        prefix: 'blog', // This allows to add a prefix to the correct url
+        url: 'http://example.com'
 ```
 
 You can also use it as a JS object using Netlify CMS [Manual Initialization](https://www.netlifycms.org/docs/beta-features/#manual-initialization)
@@ -53,6 +58,7 @@ Example:
   name: 'permalink',
   widget: 'permalink',
   required: true,
+  prefix: 'blog', // This allows to add a prefix to the correct url
   url: 'http://localhost:8000',
   hint: 'The post URL (do not include folder or file extension)',
 },
