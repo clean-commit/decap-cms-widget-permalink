@@ -1,10 +1,10 @@
-# Netlify CMS Permalink Widget
+# Decap CMS Permalink Widget
 
-Netlify CMS Widget that allows you to create customizable permalinks easily.
+Decap CMS Widget that allows you to create customizable permalinks easily.
 
 Widgets are inputs for the Netlify CMS editor interface. It's a React component that receives user input and outputs a serialized value.
 
-This widget allows you to create custom permalinks that can be used to generate pathnames for Netlify CMS based websites. The widget mimics the behaviour of WordPress permalink input field automatically outputting correct slugs.
+This widget allows you to create custom permalinks that can be used to generate pathnames for Decap CMS based websites. The widget mimics the behaviour of WordPress permalink input field automatically outputting correct slugs.
 
 ![Permalink widget](./assets/ezgif-5-f5c945ae99.gif)
 
@@ -13,14 +13,14 @@ This widget allows you to create custom permalinks that can be used to generate 
 1. Install the widget
 
 ```
-npm install netlify-cms-widget-permalink
-yarn add netlify-cms-widget-permalink
+npm install decap-cms-widget-permalink
+yarn add decap-cms-widget-permalink
 ```
 
 2. Import the Permalink widget to your Netlify CMS setup file
 
 ```
-import { Widget as PermalinkWidget } from 'netlify-cms-widget-permalink';
+import { Widget as PermalinkWidget } from 'decap-cms-widget-permalink';
 ```
 
 3. Register the widget for use
@@ -70,6 +70,7 @@ This widget is using 2 custom items:
 
 ### Additional guides
 
-- [Efficient Netlify CMS config with Manual Initialization](https://mrkaluzny.com/blog/dry-netlify-cms-config-with-manual-initialization?utm_source=GitHub&utm_medium=henlo-gatsby)
+- [ID Widget for Decap CMS](https://github.com/clean-commit/decap-cms-widget-id)
+- [Efficient Netlify CMS config with Manual Initialization](https://mrkaluzny.com/blog/dry-decap-cms-config-with-manual-initialization/?utm_source=GitHub&utm_medium=henlo-gatsby)
 - [How to optimize SEO with Gatsby & Netlify CMS](https://mrkaluzny.com/blog/how-to-optimize-seo-with-gatsby-netlify?utm_source=GitHub&utm_medium=henlo-gatsby)
-- [Full text search with Gatsby & Netlify CMS](https://mrkaluzny.com/blog/full-text-search-with-gatsby-and-netlify-cms?utm_source=GitHub&utm_medium=henlo-gatsby)
+- [Full text search with Gatsby & Decap CMS](https://mrkaluzny.com/blog/full-text-search-with-gatsby-and-decap-cms?utm_source=GitHub&utm_medium=henlo-gatsby)
